@@ -28,3 +28,25 @@ function updateDefaultCitiesTime() {
 
 updateDefaultCitiesTime();
 setInterval(updateDefaultCitiesTime, 1000);
+
+function updateCityElement(event) {
+	let selectedCity = event.target.value;
+	let cityName = selectedCity.replace("_", " ").split("/")[1];
+	let cityDate = moment().tz(selectedCity).format("MMMM Do YYYY");
+	let cityTime = moment()
+		.tz(selectedCity)
+		.format("h:mm:ss [<small>] A [</small>]");
+
+	let cityElement = document.querySelector("#city");
+	cityElement.innerHTML = `
+    <div class="default-cities">
+					<div>
+						<h2>${cityName}</h2>
+						<div class="date">${cityDate}</div>
+					</div>
+					<div class="time">${cityTime}</div>
+				</div>`;
+}
+
+let selectedCity = document.querySelector("#cities");
+selectedCity.addEventListener("change", updateCityElement);
