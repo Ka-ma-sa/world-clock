@@ -24,6 +24,18 @@ h2 {
 	margin: 0 0 5px 0;
 }
 
+a {
+	color: f9f7fe;
+	font-weight: 600;
+	text-decoration: none;
+	transition: 150ms ease-in-out;
+}
+
+a:hover {
+	font-weight: 700;
+	text-decoration: underline;
+}
+
 .container {
 	background-color: rgb(255, 255, 255);
 	box-shadow: rgba(0, 0, 0, 0.2) 0px 5px 15px;
@@ -59,6 +71,17 @@ h2 {
 	font-size: 20px;
 	vertical-align: middle;
 	line-height: 48px;
+}
+
+.all-cities {
+	text-decoration: none;
+	color: rgba(0, 0, 0, 0.2);
+	font-weight: 800;
+	transition: 150ms ease-in-out;
+}
+
+.all-cities:hover {
+	color: rgba(0, 0, 0, 0.8);
 }
 
 footer {

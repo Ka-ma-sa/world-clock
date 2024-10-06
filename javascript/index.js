@@ -56,12 +56,15 @@ function updateCityElement(event) {
 	let cityElement = document.querySelector("#city");
 	cityElement.innerHTML = `
     <div class="default-cities">
-					<div>
-						<h2>${cityName}</h2>
-						<div class="date">${cityDate}</div>
-					</div>
-					<div class="time">${cityTime}</div>
-				</div>`;
+		<div>
+		    <h2>${cityName}</h2>
+		    <div class="date">${cityDate}</div>
+		    </div>
+			<div class="time">${cityTime}</div>
+	</div>
+    <a href="https://sai3zung1.netlify.app/" class ="all-cities">ALL CITIES</a
+			>
+    `;
 }
 
 let selectedCity = document.querySelector("#cities");
