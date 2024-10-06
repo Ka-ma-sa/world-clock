@@ -31,6 +31,9 @@ setInterval(updateDefaultCitiesTime, 1000);
 
 function updateCityElement(event) {
 	let selectedCity = event.target.value;
+	if (selectedCity === "current") {
+		selectedCity = moment.tz.guess();
+	}
 	let cityName = selectedCity.replace("_", " ").split("/")[1];
 	let cityDate = moment().tz(selectedCity).format("MMMM Do YYYY");
 	let cityTime = moment()
