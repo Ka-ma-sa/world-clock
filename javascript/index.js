@@ -24,6 +24,19 @@ function updateDefaultCitiesTime() {
 			"h:mm:ss [<small>] A [</small>]"
 		)}`;
 	}
+
+	let torontoElement = document.querySelector("#toronto");
+	if (torontoElement) {
+		let torontoDateElement = torontoElement.querySelector(".date");
+		let torontoTimeELement = torontoElement.querySelector(".time");
+
+		let torontoTime = moment().tz("America/Toronto");
+
+		torontoDateElement.innerHTML = `${torontoTime.format("MMMM Do YYYY")}`;
+		torontoTimeELement.innerHTML = `${torontoTime.format(
+			"h:mm:ss [<small>] A [</small>]"
+		)}`;
+	}
 }
 
 updateDefaultCitiesTime();
